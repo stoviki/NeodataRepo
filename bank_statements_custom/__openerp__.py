@@ -1,0 +1,15 @@
+{
+    'name': 'eStatements',        
+    'application': True,
+    'author': 'NeoData',
+    'depends': ['report', 'account', 'account_voucher'],    
+    'data': ['bank_statements_custom_view.xml', 
+             'bank_statements_line_view.xml',             
+             'bank_statements_custom_report.xml',
+             'report_bank_statements.xml'],
+    'images': ['static/description/screenshot11.png'],
+    'summary': '',
+    'category': 'Accounting & Finance',
+    'price': 80.00,
+    'currency': 'EUR',
+}

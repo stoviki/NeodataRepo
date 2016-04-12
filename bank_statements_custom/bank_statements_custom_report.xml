@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+		<report 
+       		id="bank_statements_report"
+       		model="bank.statements.custom"
+       		string="Bank Statement"
+       		report_type="qweb-pdf"
+       		name="bank_statements_custom.report_bank_statements"
+       		attachment_use="False"
+       		file="bank_statements_custom.report_bank_statements"
+		/>
+	</data>
+</openerp>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<template id="report_bank_statements_document">
+   	 		<t t-call="report.external_layout">
+   	 			<div class="page">
+                	<div class="oe_structure"/>
+                		<br/>
+                		<br/>
+                		<h2>                			
+                			<span>Bank Statement N° </span>
+                			<span t-field="o.number"/>
+            			</h2>
+            			<div>
+            				<p>Bank: <span t-field="o.bank_id.name"/></p>
+            			    <p>Account: <span t-field="o.account_num"/></p> 
+            			    <p>Total Income: <span t-field="o.total_income"/></p> 
+            			    <p>Total Outcome: <span t-field="o.total_outcome"/></p> 
+            			    <p>Date: <span t-field="o.statement_date"/></p> 
+            		    </div>
+                        <table class="table table-condensed">
+                        	<thead>
+                            	<tr>
+                                	<th>Customer</th>
+                                    <th>Account</th>
+                                    <th>Invoice Out</th>
+                                    <th>Income</th>
+                                    <th>Invoice In</th>
+                                    <th>Outcome</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            	<tr t-foreach="o.statement_line" t-as="sl">
+                                	<td><span t-field="sl.customer_name"/></td>
+                                    <td>
+                                    	<span t-field="sl.account_num"/>
+                                    </td>
+                                    <td>
+                                    	<span t-field="sl.invoice_out.number"/>
+                                    </td>
+                                    <td>
+                                    	<span t-field="sl.income"/>
+                                    </td>
+                                    <td>
+                                    	<span t-field="sl.invoice_in.number"/>
+                                    </td>
+                                    <td>
+                                    	<span t-field="sl.outcome"/>
+                                    </td>
+                                 </tr>
+                         	</tbody>
+                		</table>		
+        		</div>
+    		</t>
+		</template>
+
+		<template id="report_bank_statements">
+    		<t t-call="report.html_container">
+        		<t t-foreach="doc_ids" t-as="doc_id">
+            		<t t-raw="translate_doc(doc_id, doc_model, 'partner_id.lang', 'bank_statements_custom.report_bank_statements_document')"/>
+        		</t>
+    		</t>
+		</template>
+	</data>
+</openerp>

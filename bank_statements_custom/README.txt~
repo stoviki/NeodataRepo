@@ -1,0 +1,21 @@
+
+Bank Statements Module
+
+	The Bank Statements Module is designed to offer the possibility to import bank statements in odoo and relate them to the corresponding invoices. Initally this module would work for one specific type of a statement, but its functionallity can easily be upgraded so that it would work for different bank statement types, depending on the bank specifications.
+	The installation of the module is same as the standard installation of odoo modules.
+
+1. Creating bank statements
+	To create new bank statement, click the button Create from Acounting → Bank and Cash → eStatements. This button opens the following form: (IMAGE1)
+
+
+	Here, you can choose the file that you want to be imported, the name of the statement and the bank. Because each bank has its own specifications, we have to make sure that the statement corresponds to the bank. That is accomplished by adding the bank id as an extention to the statement file. By clicking on the button Import Statement, the content of the statement file is imported to odoo and each payment registered in the statement is registered also in odoo and related to the corresponding invoice. (IMAGE2)
+
+
+ 
+The Show Unninvoiced Payments button is used to show all the payments that have not been related to any invoice after the import. The payments that have been related to an invoice can be seen by clicking the button Show Ininvoiced Payments.
+
+2. Editing bank statements
+
+	Each payment can be related to an invoice manually. This option is useful if the invoice number in odoo is different from the invoice number in the file. Also, if a wrong invoice is related to the payment, the user can change it with the right one. To change the invoice that is related to a payment, select the statement line from the tree view, and change the invoice in the Customer Invoice/Supplier Invoice. To save the changes click Update Invoices. (IMAGE3)
+
+ 

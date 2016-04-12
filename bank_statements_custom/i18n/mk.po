@@ -1,0 +1,363 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* bank_statements_custom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-11 13:55+0000\n"
+"PO-Revision-Date: 2016-03-11 13:55+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,account_num:0
+#: field:bank.statements.custom,account_id:0
+#: field:bank.statements.custom,account_num:0
+#: view:website:bank_statements_custom.report_bank_statements_document
+msgid "Account"
+msgstr "Сметка"
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,account_id:0
+msgid "Account ID"
+msgstr "ID на сметка"
+
+#. module: bank_statements_custom
+#: view:website:bank_statements_custom.report_bank_statements_document
+msgid "Account:"
+msgstr "Account:"
+
+#. module: bank_statements_custom
+#: view:bank.statement.line:bank_statements_custom.view_filter_statements_line
+msgid "All"
+msgstr "Сите"
+
+#. module: bank_statements_custom
+#: field:bank.statements.custom,bank_id:0
+msgid "Bank"
+msgstr "Банка"
+
+#. module: bank_statements_custom
+#: model:ir.actions.report.xml,name:bank_statements_custom.bank_statements_report
+msgid "Bank Statement"
+msgstr "Извод"
+
+#. module: bank_statements_custom
+#: view:website:bank_statements_custom.report_bank_statements_document
+msgid "Bank Statement N°"
+msgstr "Извод бр. "
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,statement_id:0
+msgid "Bank Statement Reference"
+msgstr "Референца кон извод"
+
+#. module: bank_statements_custom
+#: view:website:bank_statements_custom.report_bank_statements_document
+msgid "Bank:"
+msgstr "Банка:"
+
+#. module: bank_statements_custom
+#: field:bank.statements.custom,company_id:0
+msgid "Company"
+msgstr "Компанија"
+
+#. module: bank_statements_custom
+#: field:bank.statements.custom,content:0
+msgid "Content"
+msgstr "Содржина"
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,create_uid:0
+#: field:bank.statements.custom,create_uid:0
+msgid "Created by"
+msgstr "Креирано од"
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,create_date:0
+#: field:bank.statements.custom,create_date:0
+msgid "Created on"
+msgstr "Креирано на"
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,customer_id:0
+#: view:website:bank_statements_custom.report_bank_statements_document
+msgid "Customer"
+msgstr "Купувач"
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,customer_address:0
+msgid "Customer Address"
+msgstr "Адреса на клиент"
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,invoice_out:0
+msgid "Customer Invoice"
+msgstr "Излезна фактура"
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,customer_name:0
+msgid "Customer Name"
+msgstr "Назив - налогодавач/налогопримач"
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,customer_payment:0
+msgid "Customer Payment"
+msgstr "Влезна фактура"
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,date:0
+msgid "Date"
+msgstr "Датум:"
+
+#. module: bank_statements_custom
+#: view:website:bank_statements_custom.report_bank_statements_document
+msgid "Date:"
+msgstr "Датум:"
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,doznaka:0
+msgid "Description"
+msgstr "Цел на дознака"
+
+#. module: bank_statements_custom
+#: code:addons/bank_statements_custom/bank_statements_custom.py:42
+#, python-format
+msgid "Error!"
+msgstr "Грешка!"
+
+#. module: bank_statements_custom
+#: field:bank.statements.custom,file_name:0
+msgid "Filename"
+msgstr "Име на датотека"
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,id:0
+#: field:bank.statements.custom,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: bank_statements_custom
+#: view:bank.statements.custom:bank_statements_custom.view_form_custom_statements
+msgid "Import Statement"
+msgstr "Импортирај извод"
+
+#. module: bank_statements_custom
+#: field:bank.statements.custom,import_date:0
+msgid "Import date"
+msgstr "Датум на импортирање"
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,income:0
+#: view:website:bank_statements_custom.report_bank_statements_document
+msgid "Income"
+msgstr "Прилив"
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,povik_br_pobaruva:0
+msgid "Incoming Invoice Number"
+msgstr "Повик на број побарува"
+
+#. module: bank_statements_custom
+#: field:bank.statements.custom,initial_balance:0
+msgid "Initial Balance"
+msgstr "Почетен баланс"
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,instrument:0
+msgid "Instrument"
+msgstr "Инструмент"
+
+#. module: bank_statements_custom
+#: view:website:bank_statements_custom.report_bank_statements_document
+msgid "Invoice In"
+msgstr "Влезна фактура"
+
+#. module: bank_statements_custom
+#: view:website:bank_statements_custom.report_bank_statements_document
+msgid "Invoice Out"
+msgstr "Излезна фактура"
+
+#. module: bank_statements_custom
+#: view:bank.statement.line:bank_statements_custom.view_filter_statements_line
+msgid "Invoiced Payments"
+msgstr "Плаќања со фактура"
+
+#. module: bank_statements_custom
+#: model:ir.actions.act_window,name:bank_statements_custom.action_view_tree_invoiced_lines
+msgid "Invoiced Statement Lines"
+msgstr "Плаќања со фактура"
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,is_invoiced:0
+msgid "Is Invoiced"
+msgstr "Има фактура"
+
+#. module: bank_statements_custom
+#: view:bank.statements.custom:bank_statements_custom.view_filter_custom_statements
+msgid "Komercijalna Banka"
+msgstr "Комерцијална Банка"
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,write_uid:0
+#: field:bank.statements.custom,write_uid:0
+msgid "Last Updated by"
+msgstr "Последно ажурирано од"
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,write_date:0
+#: field:bank.statements.custom,write_date:0
+msgid "Last Updated on"
+msgstr "Последно ажурирано на"
+
+#. module: bank_statements_custom
+#: field:bank.statements.custom,name:0
+msgid "Name"
+msgstr "Име"
+
+#. module: bank_statements_custom
+#: field:bank.statements.custom,number:0
+msgid "Number"
+msgstr "Број"
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,outcome:0
+#: view:website:bank_statements_custom.report_bank_statements_document
+msgid "Outcome"
+msgstr "Одлив"
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,povik_br_dolzi:0
+msgid "Outgoing Invoice Number"
+msgstr "Повик на број должи"
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,payment_id:0
+msgid "Payment Code"
+msgstr "Шифра на плаќање"
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,br_reklamacija:0
+msgid "Reclamation Number"
+msgstr "Број на рекламација"
+
+#. module: bank_statements_custom
+#: view:bank.statements.custom:bank_statements_custom.view_form_custom_statements
+msgid "Show Invoiced Payments"
+msgstr "Прикажи плаќања со фактури"
+
+#. module: bank_statements_custom
+#: view:bank.statements.custom:bank_statements_custom.view_form_custom_statements
+msgid "Show Uninvoiced Payments"
+msgstr "Прикажи плаќања без фактури"
+
+#. module: bank_statements_custom
+#: field:bank.statements.custom,imported_file:0
+msgid "Statement"
+msgstr "Извод"
+
+#. module: bank_statements_custom
+#: field:bank.statements.custom,statement_line:0
+msgid "Statement Line"
+msgstr "Ставка од извод"
+
+#. module: bank_statements_custom
+#: view:bank.statement.line:bank_statements_custom.view_form_statements_line
+#: view:bank.statement.line:bank_statements_custom.view_tree_statements_line
+msgid "Statement Lines"
+msgstr "Ставки од извод"
+
+#. module: bank_statements_custom
+#: field:bank.statements.custom,statement_date:0
+msgid "Statement date"
+msgstr "Датум на извод"
+
+#. module: bank_statements_custom
+#: view:bank.statements.custom:bank_statements_custom.view_filter_custom_statements
+msgid "Stopanska Banka"
+msgstr "Стопанска Банка"
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,invoice_in:0
+msgid "Supplier Invoice"
+msgstr "Влезна фактура"
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,supplier_payment:0
+msgid "Supplier Payment"
+msgstr "Плаќање кон добавувач"
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,tax_num:0
+msgid "Tax Number"
+msgstr "Даночен број"
+
+#. module: bank_statements_custom
+#: code:addons/bank_statements_custom/bank_statements_custom.py:42
+#, python-format
+msgid "There is no default company for the current user!"
+msgstr "Не постои компанија за тековниот корисник!"
+
+#. module: bank_statements_custom
+#: field:bank.statements.custom,total_income:0
+msgid "Total Income"
+msgstr "Вкупен прилив"
+
+#. module: bank_statements_custom
+#: view:website:bank_statements_custom.report_bank_statements_document
+msgid "Total Income:"
+msgstr "Вкупен прилив:"
+
+#. module: bank_statements_custom
+#: field:bank.statements.custom,total_outcome:0
+msgid "Total Outcome"
+msgstr "Вкупен одлив"
+
+#. module: bank_statements_custom
+#: view:website:bank_statements_custom.report_bank_statements_document
+msgid "Total Outcome:"
+msgstr "Вкупен одлив:"
+
+#. module: bank_statements_custom
+#: view:bank.statements.custom:bank_statements_custom.view_filter_custom_statements
+msgid "Tutunska Banka"
+msgstr "Тутунска Банка"
+
+#. module: bank_statements_custom
+#: view:bank.statement.line:bank_statements_custom.view_filter_statements_line
+msgid "Uninvoiced Payments"
+msgstr "Плаќања без фактура"
+
+#. module: bank_statements_custom
+#: model:ir.actions.act_window,name:bank_statements_custom.action_view_tree_uninvoiced_lines
+msgid "Uninvoiced Statement Lines"
+msgstr "Плаќања без фактура"
+
+#. module: bank_statements_custom
+#: view:bank.statement.line:bank_statements_custom.view_form_statements_line
+msgid "Update Invoices"
+msgstr "Ажурирај фактури"
+
+#. module: bank_statements_custom
+#: view:bank.statements.custom:bank_statements_custom.view_form_custom_statements
+#: view:bank.statements.custom:bank_statements_custom.view_tree_custom_statements
+#: model:ir.actions.act_window,name:bank_statements_custom.action_custom_statements
+#: model:ir.ui.menu,name:bank_statements_custom.menu_custom_statements
+msgid "eStatements"
+msgstr "Eлектронски изводи"
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,customer_payment_old:0
+#: field:bank.statement.line,invoice_in_old:0
+#: field:bank.statement.line,invoice_out_old:0
+#: field:bank.statement.line,supplier_payment_old:0
+#: field:bank.statements.custom,partner_id:0
+msgid "unknown"
+msgstr "непознато"
+

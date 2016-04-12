@@ -1,0 +1,363 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* bank_statements_custom
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-03-11 13:26+0000\n"
+"PO-Revision-Date: 2016-03-11 13:26+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,account_num:0
+#: field:bank.statements.custom,account_id:0
+#: field:bank.statements.custom,account_num:0
+#: view:website:bank_statements_custom.report_bank_statements_document
+msgid "Account"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,account_id:0
+msgid "Account ID"
+msgstr ""
+
+#. module: bank_statements_custom
+#: view:website:bank_statements_custom.report_bank_statements_document
+msgid "Account:"
+msgstr ""
+
+#. module: bank_statements_custom
+#: view:bank.statement.line:bank_statements_custom.view_filter_statements_line
+msgid "All"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statements.custom,bank_id:0
+msgid "Bank"
+msgstr ""
+
+#. module: bank_statements_custom
+#: model:ir.actions.report.xml,name:bank_statements_custom.bank_statements_report
+msgid "Bank Statement"
+msgstr ""
+
+#. module: bank_statements_custom
+#: view:website:bank_statements_custom.report_bank_statements_document
+msgid "Bank Statement N°"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,statement_id:0
+msgid "Bank Statement Reference"
+msgstr ""
+
+#. module: bank_statements_custom
+#: view:website:bank_statements_custom.report_bank_statements_document
+msgid "Bank:"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statements.custom,company_id:0
+msgid "Company"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statements.custom,content:0
+msgid "Content"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,create_uid:0
+#: field:bank.statements.custom,create_uid:0
+msgid "Created by"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,create_date:0
+#: field:bank.statements.custom,create_date:0
+msgid "Created on"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,customer_id:0
+#: view:website:bank_statements_custom.report_bank_statements_document
+msgid "Customer"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,customer_address:0
+msgid "Customer Address"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,invoice_out:0
+msgid "Customer Invoice"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,customer_name:0
+msgid "Customer Name"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,customer_payment:0
+msgid "Customer Payment"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,date:0
+msgid "Date"
+msgstr ""
+
+#. module: bank_statements_custom
+#: view:website:bank_statements_custom.report_bank_statements_document
+msgid "Date:"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,doznaka:0
+msgid "Description"
+msgstr ""
+
+#. module: bank_statements_custom
+#: code:addons/bank_statements_custom/bank_statements_custom.py:42
+#, python-format
+msgid "Error!"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statements.custom,file_name:0
+msgid "Filename"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,id:0
+#: field:bank.statements.custom,id:0
+msgid "ID"
+msgstr ""
+
+#. module: bank_statements_custom
+#: view:bank.statements.custom:bank_statements_custom.view_form_custom_statements
+msgid "Import Statement"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statements.custom,import_date:0
+msgid "Import date"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,income:0
+#: view:website:bank_statements_custom.report_bank_statements_document
+msgid "Income"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,povik_br_pobaruva:0
+msgid "Incoming Invoice Number"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statements.custom,initial_balance:0
+msgid "Initial Balance"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,instrument:0
+msgid "Instrument"
+msgstr ""
+
+#. module: bank_statements_custom
+#: view:website:bank_statements_custom.report_bank_statements_document
+msgid "Invoice In"
+msgstr ""
+
+#. module: bank_statements_custom
+#: view:website:bank_statements_custom.report_bank_statements_document
+msgid "Invoice Out"
+msgstr ""
+
+#. module: bank_statements_custom
+#: view:bank.statement.line:bank_statements_custom.view_filter_statements_line
+msgid "Invoiced Payments"
+msgstr ""
+
+#. module: bank_statements_custom
+#: model:ir.actions.act_window,name:bank_statements_custom.action_view_tree_invoiced_lines
+msgid "Invoiced Statement Lines"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,is_invoiced:0
+msgid "Is Invoiced"
+msgstr ""
+
+#. module: bank_statements_custom
+#: view:bank.statements.custom:bank_statements_custom.view_filter_custom_statements
+msgid "Komercijalna Banka"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,write_uid:0
+#: field:bank.statements.custom,write_uid:0
+msgid "Last Updated by"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,write_date:0
+#: field:bank.statements.custom,write_date:0
+msgid "Last Updated on"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statements.custom,name:0
+msgid "Name"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statements.custom,number:0
+msgid "Number"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,outcome:0
+#: view:website:bank_statements_custom.report_bank_statements_document
+msgid "Outcome"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,povik_br_dolzi:0
+msgid "Outgoing Invoice Number"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,payment_id:0
+msgid "Payment Code"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,br_reklamacija:0
+msgid "Reclamation Number"
+msgstr ""
+
+#. module: bank_statements_custom
+#: view:bank.statements.custom:bank_statements_custom.view_form_custom_statements
+msgid "Show Invoiced Payments"
+msgstr ""
+
+#. module: bank_statements_custom
+#: view:bank.statements.custom:bank_statements_custom.view_form_custom_statements
+msgid "Show Uninvoiced Payments"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statements.custom,imported_file:0
+msgid "Statement"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statements.custom,statement_line:0
+msgid "Statement Line"
+msgstr ""
+
+#. module: bank_statements_custom
+#: view:bank.statement.line:bank_statements_custom.view_form_statements_line
+#: view:bank.statement.line:bank_statements_custom.view_tree_statements_line
+msgid "Statement Lines"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statements.custom,statement_date:0
+msgid "Statement date"
+msgstr ""
+
+#. module: bank_statements_custom
+#: view:bank.statements.custom:bank_statements_custom.view_filter_custom_statements
+msgid "Stopanska Banka"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,invoice_in:0
+msgid "Supplier Invoice"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,supplier_payment:0
+msgid "Supplier Payment"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,tax_num:0
+msgid "Tax Number"
+msgstr ""
+
+#. module: bank_statements_custom
+#: code:addons/bank_statements_custom/bank_statements_custom.py:42
+#, python-format
+msgid "There is no default company for the current user!"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statements.custom,total_income:0
+msgid "Total Income"
+msgstr ""
+
+#. module: bank_statements_custom
+#: view:website:bank_statements_custom.report_bank_statements_document
+msgid "Total Income:"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statements.custom,total_outcome:0
+msgid "Total Outcome"
+msgstr ""
+
+#. module: bank_statements_custom
+#: view:website:bank_statements_custom.report_bank_statements_document
+msgid "Total Outcome:"
+msgstr ""
+
+#. module: bank_statements_custom
+#: view:bank.statements.custom:bank_statements_custom.view_filter_custom_statements
+msgid "Tutunska Banka"
+msgstr ""
+
+#. module: bank_statements_custom
+#: view:bank.statement.line:bank_statements_custom.view_filter_statements_line
+msgid "Uninvoiced Payments"
+msgstr ""
+
+#. module: bank_statements_custom
+#: model:ir.actions.act_window,name:bank_statements_custom.action_view_tree_uninvoiced_lines
+msgid "Uninvoiced Statement Lines"
+msgstr ""
+
+#. module: bank_statements_custom
+#: view:bank.statement.line:bank_statements_custom.view_form_statements_line
+msgid "Update Invoices"
+msgstr ""
+
+#. module: bank_statements_custom
+#: view:bank.statements.custom:bank_statements_custom.view_form_custom_statements
+#: view:bank.statements.custom:bank_statements_custom.view_tree_custom_statements
+#: model:ir.actions.act_window,name:bank_statements_custom.action_custom_statements
+#: model:ir.ui.menu,name:bank_statements_custom.menu_custom_statements
+msgid "eStatements"
+msgstr ""
+
+#. module: bank_statements_custom
+#: field:bank.statement.line,customer_payment_old:0
+#: field:bank.statement.line,invoice_in_old:0
+#: field:bank.statement.line,invoice_out_old:0
+#: field:bank.statement.line,supplier_payment_old:0
+#: field:bank.statements.custom,partner_id:0
+msgid "unknown"
+msgstr ""
+

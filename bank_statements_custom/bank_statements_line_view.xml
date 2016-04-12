@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record id="view_form_statements_line" model="ir.ui.view">
+			<field name="name">Statement Lines Form</field>
+			<field name="model">bank.statement.line</field>
+			<field name="arch" type="xml">			
+				<form string="Statement Lines">
+					<header>						
+					</header>					
+					<sheet>	
+						<group name="group_info">	
+							<field name="instrument"/>
+							<field name="income"/>		
+							<field name="outcome"/>
+							<field name="account_num"/>	
+							<field name="customer_name"/>
+							<field name="customer_address"/>
+							<field name="tax_num"/>	
+							<field name="payment_id"/>
+							<field name="povik_br_dolzi"/>
+							<field name="povik_br_pobaruva"/>
+							<field name="doznaka"/>
+							<field name="date"/>
+							<field name="br_reklamacija"/>
+							<field name="supplier_payment" invisible="1"/>
+							<field name="customer_payment" invisible="1"/>						
+							<field name="statement_id"/>
+							<field name="invoice_out" domain = "[('type', '=', 'out_invoice'), ('state', '=', 'open')]"/>
+							<field name="invoice_in" domain = "[('type', '=', 'in_invoice'), ('state', '=', 'open')]"/>					
+					    	<field name="is_invoiced" invisible="1" />
+					    </group>
+						<button name="update_invoices" string="Update Invoices" type="object" class="oe_highlight" />
+					    				    								
+					</sheet>					
+				</form>				
+			</field>
+		</record>		
+		<record id="view_tree_statements_line" model="ir.ui.view">
+			<field name="name">Statement Lines Tree</field>
+			<field name="model">bank.statement.line</field>
+			<field name="arch" type="xml">			
+				<tree string="Statement Lines">				    
+				    <field name="customer_name"/>
+				    <field name="account_num"/>
+					<field name="income"/>		
+					<field name="outcome"/>					
+					<field name="doznaka"/>																		
+				</tree>				
+			</field>
+		</record>
+			
+		<record id="view_filter_statements_line" model="ir.ui.view">
+			<field name="name">Uninvoiced Statement Lines Filter</field>
+			<field name="model">bank.statement.line</field>	
+			<field name="arch" type="xml">
+				<search>
+					<field name="is_invoiced"/>
+					<filter string="Invoiced Payments" domain="[('is_invoiced','=', True)]"/>
+					<filter string="Uninvoiced Payments" domain="[('is_invoiced','=', False)]"/>
+					<filter string="All" domain="[]"/>					
+				</search>
+			</field>
+		</record>	
+		
+		<record id="action_view_tree_uninvoiced_lines" model="ir.actions.act_window">
+			<field name="name">Uninvoiced Statement Lines</field>
+			<field name="res_model">bank.statement.line</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="view_id" ref="view_tree_statements_line"/>
+			<field name="target">new</field>						
+		</record>
+		
+		<record id="action_view_tree_invoiced_lines" model="ir.actions.act_window">
+			<field name="name">Invoiced Statement Lines</field>
+			<field name="res_model">bank.statement.line</field>
+			<field name="view_type">form</field>
+			<field name="view_mode">tree,form</field>
+			<field name="view_id" ref="view_tree_statements_line"/>
+			<field name="target">new</field>			
+		</record>		
+        
+	</data>
+</openerp>

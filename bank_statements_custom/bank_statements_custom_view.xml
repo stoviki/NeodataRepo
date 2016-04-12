@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>	    		
+		<act_window id="action_custom_statements" name="eStatements" res_model="bank.statements.custom" view_mode="tree,form" />
+		<menuitem id="menu_custom_statements" name="eStatements" parent="account.menu_finance_bank_and_cash" sequence="20" action="action_custom_statements" />
+		
+		<record id="view_form_custom_statements" model="ir.ui.view">
+			<field name="name">eStatements Form</field>
+			<field name="model">bank.statements.custom</field>
+			<field name="arch" type="xml">			
+				<form string="eStatements">
+					<header>						
+					</header>					
+					<sheet>	
+						<group name="group_info">
+							<field name="id" invisible="1"/>										
+							<field name="imported_file" filename="file_name"/>
+							<field name="name"/>						
+							<field name="file_name" invisible="1"/>	
+							<field name="account_id" invisible="1"/>
+							<field name="account_num" invisible="1"/>
+							<field name="bank_id"/>	
+							<field name="company_id" invisible="1"/>
+							<field name="statement_date" invisible="1"/>
+							<field name="hide_button" invisible="1"/>																																								
+					    </group>	
+						<button name="import_statement" string="Import Statement" type="object"  class="oe_highlight" attrs="{'invisible': [('hide_button', '=', True)]}"/>
+						<button name="show_uninvoiced_payments" string="Show Uninvoiced Payments" type="object"/>
+						<button name="show_invoiced_payments" string="Show Invoiced Payments" type="object"/>
+						<field name="statement_line"/>
+					</sheet>
+				</form>				
+			</field>
+		</record>
+		<record id="view_tree_custom_statements" model="ir.ui.view">
+			<field name="name">eStatements Tree</field>
+			<field name="model">bank.statements.custom</field>
+			<field name="arch" type="xml">			
+				<tree string="eStatements">					
+					<field name="account_id" invisible="1"/>
+					<field name="name"/>
+					<field name="bank_id"/>											
+				</tree>				
+			</field>
+		</record>
+		<record id="view_filter_custom_statements" model="ir.ui.view">
+			<field name="name">eStatements Filter</field>
+			<field name="model">bank.statements.custom</field>
+			<field name="arch" type="xml">
+				<search>
+					<field name="bank_id"/>
+					<filter string="Komercijalna Banka" domain="[('bank_id','=','komercijalna')]"/>
+					<filter string="Stopanska Banka" domain="[('bank_id','=','stopanska')]"/>
+					<filter string="Tutunska Banka" domain="[('bank_id','=','tutunska')]"/>
+				</search>
+			</field>
+		</record>		
+	</data>
+</openerp>
