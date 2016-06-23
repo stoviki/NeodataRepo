@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<menuitem id="menu_quotation_templates" parent="base.menu_base_partner" 
+		          name="Quotation Templates"/>
+        
+		<record id="view_form_quotation_templates_nd" model="ir.ui.view">
+			<field name="name">Quotation Templates Form</field>
+			<field name="model">quotation.templates.nd</field>
+			<field name="arch" type="xml">			
+				<form string="Quotation Templates">
+					<header>						
+					</header>					
+					<sheet>	
+					    <field name="image_medium" widget="image"/>																
+						<group name="info">						    
+							<field name="name"/>
+							<field name="external_id"/>	
+							<field name="selected"/>
+						</group>
+						<group name="report_description">						    
+							<field name="description"/>							
+						</group>
+						<notebook name="code">
+							<page string="Content">
+								<field name="qweb_content"/>
+							</page>
+							<page string="Header">
+								<field name="qweb_header"/>
+							</page>							
+							<page string="Footer">
+								<field name="qweb_footer"/>
+							</page>																																											
+					    </notebook>					    						
+					</sheet>
+				</form>				
+			</field>
+		</record>
+		
+		<record id="view_search_quotation_templates_nd" model="ir.ui.view">
+			<field name="name">Quotation Templates Search</field>
+			<field name="model">quotation.templates.nd</field>
+			<field name="arch" type="xml">			
+				<search string="Search Quotation Templates">
+					<field name="name"/>					
+				</search>				
+			</field>
+		</record>
+		
+		<record id="view_kanban_quotation_templates_nd" model="ir.ui.view">
+			<field name="name">Quotation Templates Kanban</field>
+			<field name="model">quotation.templates.nd</field>
+			<field name="arch" type="xml">			
+				<kanban string="Quotation Templates">
+					<field name="name"/>
+					<field name="selected" invisible="1"/>
+					<templates>
+                    <t t-name="kanban-box">
+                    	<div class="oe_kanban_vignette oe_semantic_html_override">
+                    		<div style="background-color: #F6F6F6; padding: 1px;">
+                    			<div align="center">
+                            		<a type="open"><img t-att-src="kanban_image('quotation.templates.nd', 'image', record.id.value)" style = "width: 209px; height: 294px;"/></a>
+                            	</div> 
+                                <div style="background-color: #F6F6F6; border: 1px solid #F6F6F6; padding-bottom: 3px;">   
+                                	<h4>
+                                		<field name="name"/>               
+                                	</h4>
+                                	<div name="buttons" attrs="{'invisible': [('selected', '=', True)]}"> 
+                                		<p><br/></p>
+                                		<div style="display: inline;">                               		                        		                                		                         	
+                                			<button name="preview_template" type="object" attrs="{'invisible': [('selected', '=', True)]}">Preview</button>
+                                		</div>
+                                		<div style="display: inline; float: right;">
+                                			<button name="select_template" type="object" attrs="{'invisible': [('selected', '=', True)]}" class="oe_highlight">Select Template</button>                                		
+                                		</div>
+                                	</div>
+                                	<div name="selected_buttons" attrs="{'invisible': [('selected', '=', False)]}"> 
+                                		<p style="color: #CCCCCC;">This is the current template</p> 
+                                		<button name="preview_template" type="object">Preview</button>
+                                	</div>      		
+                                </div>  
+                            </div>
+                        </div>
+                    </t>
+                </templates>					
+				</kanban>						
+			</field>
+		</record>
+		
+		<record id="view_search_quotation_templates_nd" model="ir.ui.view">
+			<field name="name">Quotation Templates Search</field>
+			<field name="model">quotation.templates.nd</field>
+			<field name="arch" type="xml">			
+				<search string="Search Quotation Templates">
+					<field name="name"/>
+					<field name="external_id"/>					
+				</search>				
+			</field>
+		</record>
+	
+		<record id="action_quotation_templates_select" model="ir.actions.act_window">
+        <field name="name">Select Template</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">quotation.templates.nd</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">kanban</field>
+        <field name="context">{"search_default_user_id":uid}</field>
+        <field name="search_view_id" ref="view_search_quotation_templates_nd"/>
+        <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+            There aren't any quotation templates in the database.
+          </p>
+          <p>
+            The default quotation templates are not available. You can create new templates and then select one of them for your quotations. 
+          </p>
+        </field>
+    </record>
+
+    <menuitem
+        id="menu_quotation_templates_select" name="Select Template"
+        sequence="10"
+        parent="menu_quotation_templates"
+        action="action_quotation_templates_select"/>
+       
+    <record id="action_quotation_templates_create" model="ir.actions.act_window">
+        <field name="name">Create Template</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">quotation.templates.nd</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="context">{"search_default_user_id":uid}</field>
+        <field name="search_view_id" ref="view_search_quotation_templates_nd"/>
+        <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+            There aren't any quotation templates in the database.
+          </p>
+          <p>
+            The default quotation templates are not available. You can create new templates and then select one of them for your quotations. 
+          </p>
+        </field>
+    </record>
+
+    <menuitem
+        id="menu_quotation_templates_create" name="Templates"
+        sequence="10"
+        parent="menu_quotation_templates"
+        action="action_quotation_templates_create" groups="base.group_erp_manager"/>
+	   
+	
+	    
+	</data>
+</openerp>

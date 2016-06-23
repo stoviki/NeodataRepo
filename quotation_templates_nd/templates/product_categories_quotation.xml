@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<!--QUOTATION WITH PRODUCT CATEGORIES-->
+		<record id="product_categories_quotation" model="quotation.templates.nd">
+    		<field name="name">Custom Quotation Template 1</field>
+    		<field name="external_id">product_categories_quotation</field>
+    		<field name="description">An improvement to the default template where the product are divided by category.</field>
+    		
+    		<!--HEADER-->
+    		<field name="qweb_header">
+    			&lt;div class=&quot;header&quot;&gt;
+        			&lt;div class=&quot;row&quot;&gt;
+            			&lt;div class=&quot;col-xs-3&quot;&gt;
+                			&lt;img t-if=&quot;company.logo&quot; t-att-src=&quot;&apos;data:image/png;base64,%s&apos; % company.logo&quot; style=&quot;max-height: 45px;&quot;/&gt;
+            			&lt;/div&gt;
+            			&lt;div class=&quot;col-xs-9 text-right&quot; style=&quot;margin-top:20px;&quot; t-field=&quot;company.rml_header1&quot;/&gt;
+        			&lt;/div&gt;
+        			&lt;div class=&quot;row zero_min_height&quot;&gt;
+            			&lt;div class=&quot;col-xs-12&quot;&gt;
+                			&lt;div style=&quot;border-bottom: 1px solid black;&quot;/&gt;
+            			&lt;/div&gt;
+        			&lt;/div&gt;
+        			&lt;div class=&quot;row&quot;&gt;
+            			&lt;div class=&quot;col-xs-6&quot;&gt;
+                			&lt;div t-field=&quot;company.partner_id&quot; t-field-options=&quot;{&amp;quot;widget&amp;quot;: &amp;quot;contact&amp;quot;, &amp;quot;fields&amp;quot;: [&amp;quot;address&amp;quot;, &amp;quot;name&amp;quot;], &amp;quot;no_marker&amp;quot;: true}&quot; style=&quot;border-bottom: 1px solid black;&quot;/&gt;
+            			&lt;/div&gt;
+        			&lt;/div&gt;
+    			&lt;/div&gt;
+    		</field>
+    		
+    		<!--MAIN CONTENT-->
+    		<field name="qweb_content">
+    		    &lt;div class=&quot;page&quot;&gt;
+            		&lt;div class=&quot;oe_structure&quot;/&gt;
+            			&lt;div class=&quot;row&quot;&gt;
+                			&lt;div class=&quot;col-xs-6&quot;&gt;
+                    			&lt;p t-if=&quot;o.partner_shipping_id == o.partner_invoice_id&quot;&gt;Invoice and shipping address:&lt;/p&gt;
+                    			&lt;p t-if=&quot;o.partner_shipping_id != o.partner_invoice_id&quot;&gt;Invoice address: &lt;/p&gt;
+                    			&lt;div t-field=&quot;o.partner_invoice_id&quot; t-field-options=&quot;{&amp;quot;widget&amp;quot;: &amp;quot;contact&amp;quot;, &amp;quot;fields&amp;quot;: [&amp;quot;address&amp;quot;, &amp;quot;name&amp;quot;, &amp;quot;phone&amp;quot;, &amp;quot;fax&amp;quot;], &amp;quot;no_marker&amp;quot;: true}&quot;/&gt;
+                    			&lt;p t-if=&quot;o.partner_id.vat&quot;&gt;VAT: &lt;span t-field=&quot;o.partner_id.vat&quot;/&gt;&lt;/p&gt;
+                   				&lt;div t-if=&quot;o.partner_shipping_id != o.partner_invoice_id&quot;&gt;
+                        			&lt;p&gt;Shipping address :&lt;/p&gt;
+                        			&lt;div t-field=&quot;o.partner_shipping_id&quot; t-field-options=&quot;{&amp;quot;widget&amp;quot;: &amp;quot;contact&amp;quot;, &amp;quot;fields&amp;quot;: [&amp;quot;address&amp;quot;, &amp;quot;name&amp;quot;, &amp;quot;phone&amp;quot;, &amp;quot;fax&amp;quot;], &amp;quot;no_marker&amp;quot;: true}&quot;/&gt;
+                        			&lt;p t-if=&quot;o.partner_id.vat&quot;&gt;VAT: &lt;span t-field=&quot;o.partner_id.vat&quot;/&gt;&lt;/p&gt;
+                    			&lt;/div&gt;                        
+                			&lt;/div&gt;
+                			&lt;div class=&quot;col-xs-5 col-xs-offset-1&quot;&gt;                				
+                    		&lt;/div&gt;
+            			&lt;/div&gt;
+
+            			&lt;h2&gt;
+                			&lt;span t-if=&quot;o.state not in [&apos;draft&apos;,&apos;sent&apos;]&quot;&gt;Order N&#176; &lt;/span&gt;
+                			&lt;span t-if=&quot;o.state in [&apos;draft&apos;,&apos;sent&apos;]&quot;&gt;Quotation N&#176; &lt;/span&gt;
+                			&lt;span t-field=&quot;o.name&quot;/&gt;
+            			&lt;/h2&gt;
+
+            			&lt;div class=&quot;row mt32 mb32&quot; id=&quot;informations&quot;&gt;
+                			&lt;div t-if=&quot;o.client_order_ref&quot; class=&quot;col-xs-3&quot;&gt;
+                    			&lt;strong&gt;Your Reference:&lt;/strong&gt;
+                    			&lt;p t-field=&quot;o.client_order_ref&quot;/&gt;
+                			&lt;/div&gt;
+                			&lt;div t-if=&quot;o.date_order&quot; class=&quot;col-xs-3&quot;&gt;
+                    			&lt;strong t-if=&quot;o.state not in [&apos;draft&apos;,&apos;sent&apos;]&quot;&gt;Date Ordered:&lt;/strong&gt;
+                    			&lt;strong t-if=&quot;o.state in [&apos;draft&apos;,&apos;sent&apos;]&quot;&gt;Quotation Date:&lt;/strong&gt;
+                    			&lt;p t-field=&quot;o.date_order&quot;/&gt;
+                			&lt;/div&gt;
+                			&lt;div t-if=&quot;o.user_id.name&quot; class=&quot;col-xs-3&quot;&gt;
+                    			&lt;strong&gt;Salesperson:&lt;/strong&gt;
+                    			&lt;p t-field=&quot;o.user_id.name&quot;/&gt;
+                			&lt;/div&gt;
+                			&lt;div t-if=&quot;o.payment_term&quot; class=&quot;col-xs-3&quot;&gt;
+                    			&lt;strong&gt;Payment Term:&lt;/strong&gt;
+                    			&lt;p t-field=&quot;o.payment_term&quot;/&gt;
+                			&lt;/div&gt;
+            			&lt;/div&gt;                   
+                                
+                                &lt;!-- PRODUCTS BY CATEGORY --&gt;
+                                &lt;t t-set=&quot;product_categories&quot; t-value=&quot;[]&quot;/&gt;
+                                &lt;t t-foreach=&quot;o.order_line&quot; t-as=&quot;l&quot;&gt;
+                                    &lt;t t-set=&quot;category&quot; t-value=&quot;l.product_id.categ_id&quot;/&gt;                                  
+                                    &lt;table t-if=&quot;category not in product_categories&quot; class=&quot;table table-condensed&quot; style=&quot;page-break-inside: avoid;&quot;&gt;
+                                        &lt;thead&gt;
+                                                &lt;tr&gt;
+                                                    &lt;td colspan=&quot;6&quot;&gt;                                                                                        
+                                                        &lt;p style=&quot;margin-top: -200px;&quot; t-if=&quot;category.category_description&quot; t-field=&quot;category.category_description&quot;/&gt;
+                                                    &lt;/td&gt;
+                                                &lt;/tr&gt;                                               
+                   				&lt;tr&gt;
+                        			&lt;th width=&quot;30%&quot;&gt;Description&lt;/th&gt;
+                        			&lt;th width=&quot;10%&quot;&gt;Taxes&lt;/th&gt;
+                        			&lt;th class=&quot;text-right&quot; width=&quot;20%&quot;&gt;Quantity&lt;/th&gt;
+                        			&lt;th class=&quot;text-right&quot; width=&quot;15%&quot;&gt;Unit Price&lt;/th&gt;
+                        			&lt;th groups=&quot;sale.group_discount_per_so_line&quot; width=&quot;10%&quot;&gt;Disc.(%)&lt;/th&gt;
+                        			&lt;th class=&quot;text-right&quot; width=&quot;15%&quot;&gt;Price&lt;/th&gt;
+                    			&lt;/tr&gt;
+               				&lt;/thead&gt;
+                                        &lt;tbody class=&quot;sale_tbody&quot;&gt;
+                                            &lt;!--DATA PER PRODUCT--&gt;
+                                            &lt;t t-foreach=&quot;o.order_line&quot; t-as=&quot;l&quot;&gt;                                             
+                                                &lt;tr t-if=&quot;category.id==l.product_id.categ_id.id&quot;&gt;
+                                                    &lt;td&gt;
+                           				&lt;span t-field=&quot;l.name&quot;/&gt;
+                        			    &lt;/td&gt;
+                      				    &lt;td&gt;
+                            			        &lt;span t-esc=&quot;&apos;, &apos;.join(map(lambda x: x.name, l.tax_id))&quot;/&gt;
+                        			    &lt;/td&gt;
+                        			    &lt;td class=&quot;text-right&quot;&gt;
+                            			        &lt;span t-field=&quot;l.product_uom_qty&quot;/&gt;
+                            			        &lt;span groups=&quot;product.group_uom&quot; t-field=&quot;l.product_uom&quot;/&gt;
+                        			    &lt;/td&gt;
+                        			    &lt;td class=&quot;text-right&quot;&gt;
+                            			        &lt;span t-field=&quot;l.price_unit&quot;/&gt;
+                        			    &lt;/td&gt;
+                        			    &lt;td groups=&quot;sale.group_discount_per_so_line&quot;&gt;
+                            			        &lt;span t-field=&quot;l.discount&quot;/&gt;
+                        			    &lt;/td&gt;
+                        			    &lt;td class=&quot;text-right&quot;&gt;
+                            			        &lt;span t-field=&quot;l.price_subtotal&quot;/&gt;
+                        			    &lt;/td&gt; 
+                                                &lt;/tr&gt;
+                                            &lt;/t&gt;
+                                        &lt;/tbody&gt;
+                                        &lt;t t-set=&quot;product_categories&quot; t-value=&quot;product_categories+[category]&quot;/&gt;
+                                    &lt;/table&gt;
+                                    &lt;br/&gt;
+                                    &lt;br/&gt;
+                                &lt;/t&gt;
+
+            			&lt;div class=&quot;row&quot;&gt;
+                			&lt;div class=&quot;col-xs-4 pull-right&quot;&gt;
+                    			&lt;table class=&quot;table table-condensed&quot; style=&quot;page-break-inside: avoid;&quot;&gt;
+                        			&lt;tr class=&quot;border-black&quot;&gt;
+                            			&lt;td&gt;&lt;strong&gt;Total Without Taxes&lt;/strong&gt;&lt;/td&gt;
+                            			&lt;td class=&quot;text-right&quot;&gt;
+                                			&lt;span t-field=&quot;o.amount_untaxed&quot;/&gt;
+                            			&lt;/td&gt;
+                        			&lt;/tr&gt;
+                        			&lt;tr&gt;
+                            			&lt;td&gt;Taxes&lt;/td&gt;
+                            			&lt;td class=&quot;text-right&quot;&gt;
+                                			&lt;span t-field=&quot;o.amount_tax&quot;/&gt;
+                            			&lt;/td&gt;
+                        			&lt;/tr&gt;
+                        			&lt;tr class=&quot;border-black&quot;&gt;
+                            			&lt;td&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+                            			&lt;td class=&quot;text-right&quot;&gt;
+                               				&lt;span t-field=&quot;o.amount_total&quot;/&gt;
+                            			&lt;/td&gt;
+                        			&lt;/tr&gt;
+                    			&lt;/table&gt;
+                			&lt;/div&gt;
+            			&lt;/div&gt;
+
+            			&lt;p t-field=&quot;o.note&quot;/&gt;
+            			&lt;p t-if=&quot;o.payment_term&quot;&gt;
+                			&lt;strong&gt;Payment Term:&lt;/strong&gt;
+                			&lt;span t-field=&quot;o.payment_term&quot;/&gt;
+            			&lt;/p&gt;
+            		&lt;div class=&quot;oe_structure&quot;/&gt;
+        		&lt;/div&gt;
+    		</field>
+    		
+    		<!--FOOTER-->
+    		<field name="qweb_footer">
+    		    &lt;div class=&quot;footer&quot;&gt;
+        			&lt;div class=&quot;text-center&quot; style=&quot;border-top: 1px solid black;&quot;&gt;
+            			&lt;ul t-if=&quot;not company.custom_footer&quot; class=&quot;list-inline&quot;&gt;
+                			&lt;li t-if=&quot;company.phone&quot;&gt;Phone: &lt;span t-field=&quot;company.phone&quot;/&gt;&lt;/li&gt;
+
+                			&lt;li t-if=&quot;company.fax and company.phone&quot;&gt;&amp;amp;bull;&lt;/li&gt;
+                			&lt;li t-if=&quot;company.fax&quot;&gt;Fax: &lt;span t-field=&quot;company.fax&quot;/&gt;&lt;/li&gt;
+
+                			&lt;li t-if=&quot;company.email&quot;&gt;&amp;amp;bull;&lt;/li&gt;
+                			&lt;li t-if=&quot;company.email&quot;&gt;Email: &lt;span t-field=&quot;company.email&quot;/&gt;&lt;/li&gt;
+
+                			&lt;li t-if=&quot;company.website&quot;&gt;&amp;amp;bull;&lt;/li&gt;
+                			&lt;li t-if=&quot;company.website&quot;&gt;Website: &lt;span t-field=&quot;company.website&quot;/&gt;&lt;/li&gt;
+            			&lt;/ul&gt;
+
+            			&lt;t t-if=&quot;company.custom_footer&quot;&gt;
+                			&lt;span t-raw=&quot;company.rml_footer&quot;/&gt;
+            			&lt;/t&gt;
+
+            			&lt;ul class=&quot;list-inline&quot;&gt;
+                			&lt;li&gt;Page:&lt;/li&gt;
+                			&lt;li&gt;&lt;span class=&quot;page&quot;/&gt;&lt;/li&gt;
+                			&lt;li&gt;/&lt;/li&gt;
+                			&lt;li&gt;&lt;span class=&quot;topage&quot;/&gt;&lt;/li&gt;
+            			&lt;/ul&gt;
+        			&lt;/div&gt;
+    			&lt;/div&gt;
+    		</field>
+    		
+    		<field name="image" type="base64" file="quotation_templates_nd/images/custom_template_1.jpg"/>    		
+    		<field name="image_medium" type="base64" file="quotation_templates_nd/images/custom_template_1.jpg"/>    		
+    		<!--<field name="selected">False</field>-->
+    	</record>
+	</data>
+</openerp>

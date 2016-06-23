@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<!--NEODATA QUOTATION TEMPLATE-->
+		<record id="neodata_quotation" model="quotation.templates.nd">
+    		<field name="name">Neodata Quotation Template</field>
+    		<field name="external_id">neodata_quotation</field>
+    		<field name="description">Custom designed quotation template.</field>
+    		
+    		<!--HEADER-->
+    		<field name="qweb_header">
+    		        		    
+    		    &lt;div class=&quot;header&quot;&gt;
+        		    &lt;div class=&quot;row&quot; style=&quot;border-bottom: 1px solid  #CCCCCC; color: #616161; margin-right: -30px;&quot;&gt;
+                                &lt;div class=&quot;col-xs-3&quot;&gt;                               
+                                    &lt;div&gt;
+                	                &lt;img t-if=&quot;company.logo&quot; t-att-src=&quot;&apos;data:image/png;base64,%s&apos; % company.logo&quot; style=&quot;max-height: 45px;&quot;/&gt;
+            			    &lt;/div&gt;
+                                    &lt;br/&gt;
+                                    &lt;p t-field=&quot;company.rml_header1&quot;/&gt;
+                                &lt;/div&gt; 
+                                &lt;div id=&quot;company_info&quot;  class=&quot;col-xs-9 text-right&quot;&gt;                              
+                	            &lt;p t-field=&quot;company.partner_id.name&quot; style=&quot;color: #616161; font-size: 1.4em; font-weight: normal;&quot;/&gt;
+                                    &lt;div&gt;
+                	                &lt;span t-field=&quot;company.partner_id.street&quot; /&gt;
+                	                &lt;span t-field=&quot;company.partner_id.street2&quot; /&gt;                	                
+                                    &lt;/div&gt;         
+                                    &lt;div&gt;
+                	                &lt;span t-field=&quot;company.partner_id.zip&quot; /&gt;
+                	                &lt;span t-field=&quot;company.partner_id.city&quot; /&gt;  
+                                        &lt;span t-field=&quot;company.partner_id.state_id&quot; /&gt;              	                
+                                    &lt;/div&gt;       
+                                    &lt;div&gt;
+                	                &lt;span t-field=&quot;company.partner_id.country_id&quot; /&gt;                	                           	                
+                                    &lt;/div&gt;                              
+                                &lt;/div&gt;
+                            &lt;/div&gt; 
+    			&lt;/div&gt;     		 					
+    		</field>
+    		
+    		<!--MAIN CONTENT-->
+    		<field name="qweb_content">
+    		    &lt;div class=&quot;page&quot;&gt;
+            		&lt;div class=&quot;oe_structure&quot;/&gt;
+                        &lt;br/&gt;&lt;br/&gt;
+                        &lt;div class=&quot;row&quot; style=&quot;color: #616161; border-left: 3px solid #2CABBA; margin-right: -30px;&quot;&gt;
+                            &lt;div id=&quot;partner_info&quot; class=&quot;col-xs-6&quot;&gt;
+                    	        &lt;p t-if=&quot;o.partner_shipping_id == o.partner_invoice_id&quot;&gt;Invoice and shipping address:&lt;/p&gt;
+                    		&lt;p t-if=&quot;o.partner_shipping_id != o.partner_invoice_id&quot;&gt;Invoice address: &lt;/p&gt;
+                    		&lt;div t-field=&quot;o.partner_invoice_id&quot; t-field-options=&quot;{&amp;quot;widget&amp;quot;: &amp;quot;contact&amp;quot;, &amp;quot;fields&amp;quot;: [&amp;quot;address&amp;quot;, &amp;quot;name&amp;quot;, &amp;quot;phone&amp;quot;, &amp;quot;fax&amp;quot;], &amp;quot;no_marker&amp;quot;: true}&quot;/&gt;
+                    		&lt;p t-if=&quot;o.partner_id.vat&quot;&gt;VAT: &lt;span t-field=&quot;o.partner_id.vat&quot;/&gt;&lt;/p&gt;
+                   	        &lt;div t-if=&quot;o.partner_shipping_id != o.partner_invoice_id&quot;&gt;
+                        	    &lt;p&gt;Shipping address :&lt;/p&gt;
+                        	    &lt;div t-field=&quot;o.partner_shipping_id&quot; t-field-options=&quot;{&amp;quot;widget&amp;quot;: &amp;quot;contact&amp;quot;, &amp;quot;fields&amp;quot;: [&amp;quot;address&amp;quot;, &amp;quot;name&amp;quot;, &amp;quot;phone&amp;quot;, &amp;quot;fax&amp;quot;], &amp;quot;no_marker&amp;quot;: true}&quot;/&gt;
+                        	    &lt;p t-if=&quot;o.partner_id.vat&quot;&gt;VAT: &lt;span t-field=&quot;o.partner_id.vat&quot;/&gt;&lt;/p&gt;
+                    		&lt;/div&gt;                        
+                	    &lt;/div&gt;
+                            &lt;div class=&quot;col-xs-6 text-right&quot; style=&quot;float: right;&quot;&gt;
+                                &lt;p style=&quot;color: #2CABBA; font-size: 2.4em;&quot;&gt;
+                			&lt;span t-if=&quot;o.state not in [&apos;draft&apos;,&apos;sent&apos;]&quot;&gt;Order N&#176; &lt;/span&gt;
+                			&lt;span t-if=&quot;o.state in [&apos;draft&apos;,&apos;sent&apos;]&quot;&gt;Quotation N&#176; &lt;/span&gt;
+                			&lt;span t-field=&quot;o.name&quot;/&gt;
+            			&lt;/p&gt;
+                                &lt;div&gt;                			
+                			&lt;div t-if=&quot;o.date_order&quot;&gt;
+                    			    &lt;strong t-if=&quot;o.state not in [&apos;draft&apos;,&apos;sent&apos;]&quot;&gt;Date Ordered:&lt;/strong&gt;
+                    			    &lt;strong t-if=&quot;o.state in [&apos;draft&apos;,&apos;sent&apos;]&quot;&gt;Quotation Date:&lt;/strong&gt;
+                    			    &lt;span t-field=&quot;o.date_order&quot;/&gt;
+                			&lt;/div&gt;
+                			&lt;div t-if=&quot;o.user_id.name&quot;&gt;
+                    			    &lt;strong&gt;Salesperson:&lt;/strong&gt;
+                    			    &lt;span t-field=&quot;o.user_id.name&quot;/&gt;
+                			&lt;/div&gt;
+                			&lt;div t-if=&quot;o.payment_term&quot;&gt;
+                    			    &lt;strong&gt;Payment Term:&lt;/strong&gt;
+                    			    &lt;span t-field=&quot;o.payment_term&quot;/&gt;
+                			&lt;/div&gt;
+            			&lt;/div&gt; 
+                            &lt;/div&gt;                          
+                        &lt;/div&gt;
+                        &lt;br/&gt;&lt;br/&gt;&lt;br/&gt;
+                        &lt;div class=&quot;row&quot; style=&quot;margin: 10 px, 0px, 10px, 0px;&quot;&gt;                	    
+                                &lt;table style=&quot;border-collapse: collapse; background: #EEEEEE; width: 100%;&quot;&gt;
+                	            &lt;thead&gt;
+                   	                &lt;tr style=&quot;padding: 10px; height: 30px; color: #616161; border-bottom: solid 1px white;&quot;&gt;
+                        	            &lt;th  style=&quot;padding: 5px;&quot;&gt;Description&lt;/th&gt;                       	            
+                        	            &lt;th style=&quot;padding: 5px;&quot; class=&quot;text-right&quot;&gt;Quantity&lt;/th&gt;
+                        	            &lt;th class=&quot;text-right&quot; style=&quot;background: #DDDDDD; padding: 5px;&quot;&gt;Unit Price&lt;/th&gt;
+                        	            &lt;th style=&quot;padding: 5px;&quot; groups=&quot;sale.group_discount_per_so_line&quot;&gt;Disc.(%)&lt;/th&gt;
+                                            &lt;th style=&quot;padding: 5px;&quot; class=&quot;text-right&quot;&gt;Taxes&lt;/th&gt;
+                        	            &lt;th class=&quot;text-right&quot; style=&quot;background: #2CABBA; padding: 5px; color: white;&quot;&gt;Price&lt;/th&gt;
+                    		        &lt;/tr&gt;
+               	                    &lt;/thead&gt;
+               			    &lt;tbody class=&quot;sale_tbody&quot;&gt;
+                    			&lt;tr t-foreach=&quot;o.order_line&quot; t-as=&quot;l&quot; style=&quot;padding: 10px; height: 30px;  color: #616161; border-bottom: 1px solid white;&quot;&gt;
+                        			&lt;td style=&quot;padding: 5px;  color: #2CABBA;&quot;&gt;
+                           				&lt;span t-field=&quot;l.name&quot;/&gt;
+                        			&lt;/td&gt;
+                                                &lt;td class=&quot;text-right&quot; style=&quot;padding: 5px;&quot;&gt;
+                            			    &lt;span t-field=&quot;l.product_uom_qty&quot;/&gt;
+                            			    &lt;span groups=&quot;product.group_uom&quot; t-field=&quot;l.product_uom&quot;/&gt;
+                        			&lt;/td&gt;
+                                                &lt;td class=&quot;text-right&quot; style=&quot;background: #DDDDDD; padding: 5px;&quot;&gt;
+                            			    &lt;span t-field=&quot;l.price_unit&quot;/&gt;
+                        			&lt;/td&gt;
+                        			&lt;td groups=&quot;sale.group_discount_per_so_line&quot; style=&quot;padding: 5px;&quot;&gt;
+                            			    &lt;span t-field=&quot;l.discount&quot;/&gt;
+                        			&lt;/td&gt;
+                      				&lt;td style=&quot;padding: 5px;&quot; class=&quot;text-right&quot;&gt;
+                            			    &lt;span t-esc=&quot;&apos;, &apos;.join(map(lambda x: x.name, l.tax_id))&quot; class=&quot;text-right&quot;/&gt;
+                        			&lt;/td&gt;
+                        			&lt;td class=&quot;text-right&quot; style=&quot;background: #2CABBA; padding: 5px; color: white;&quot;&gt;
+                            			    &lt;span t-field=&quot;l.price_subtotal&quot; t-field-options=&quot;{&amp;quot;widget&amp;quot;: &amp;quot;monetary&amp;quot;, &amp;quot;display_currency&amp;quot;: &amp;quot;o.pricelist_id.currency_id&amp;quot;}&quot;/&gt;
+                        			&lt;/td&gt;
+                    			&lt;/tr&gt;
+                		    &lt;/tbody&gt;
+            		      &lt;/table&gt;                            
+                	&lt;/div&gt; 
+                        &lt;br/&gt;&lt;br/&gt;&lt;br/&gt;                   
+          	        &lt;div class=&quot;row&quot; style=&quot;color: #616161; margin-right: -30px;&quot;&gt;
+                            &lt;div class=&quot;col-xs-6 pull-right&quot;&gt;
+                    		&lt;table style=&quot;width: 100%;  color: #616161; page-break-inside: avoid;&quot;&gt;
+                        	    &lt;tr style=&quot;padding: 10px; height: 30px; border-bottom: solid 1px #CCCCCC;&quot;&gt;
+                            		&lt;td&gt;&lt;strong&gt;Total Without Taxes&lt;/strong&gt;&lt;/td&gt;
+                            		&lt;td class=&quot;text-right&quot;&gt;
+                                	    &lt;span t-field=&quot;o.amount_untaxed&quot; t-field-options=&quot;{&amp;quot;widget&amp;quot;: &amp;quot;monetary&amp;quot;, &amp;quot;display_currency&amp;quot;: &amp;quot;o.pricelist_id.currency_id&amp;quot;}&quot;/&gt;
+                            		&lt;/td&gt;
+                        	    &lt;/tr&gt;
+                        	   &lt;tr style=&quot;padding: 10px; height: 40px; border-bottom: solid 1px #2CABBA;&quot;&gt;
+                            		&lt;td&gt;Taxes&lt;/td&gt;
+                            		&lt;td class=&quot;text-right&quot;&gt;
+                                	    &lt;span t-field=&quot;o.amount_tax&quot; t-field-options=&quot;{&amp;quot;widget&amp;quot;: &amp;quot;monetary&amp;quot;, &amp;quot;display_currency&amp;quot;: &amp;quot;o.pricelist_id.currency_id&amp;quot;}&quot;/&gt;
+                            		&lt;/td&gt;
+                        	    &lt;/tr&gt;
+                                    &lt;tr style=&quot;padding: 10px; height: 30px; color: #2CABBA;&quot;&gt;                        	  
+                            		&lt;td&gt;&lt;strong&gt;Total&lt;/strong&gt;&lt;/td&gt;
+                            		&lt;td class=&quot;text-right&quot;&gt;
+                               		    &lt;span t-field=&quot;o.amount_total&quot; t-field-options=&quot;{&amp;quot;widget&amp;quot;: &amp;quot;monetary&amp;quot;, &amp;quot;display_currency&amp;quot;: &amp;quot;o.pricelist_id.currency_id&amp;quot;}&quot;/&gt;
+                            		&lt;/td&gt;
+                        	     &lt;/tr&gt;
+                    		 &lt;/table&gt;
+                	     &lt;/div&gt;
+            	          &lt;/div&gt;
+                          &lt;div t-if=&quot;o.note or o.payment_term&quot; class=&quot;row&quot; style=&quot;color: #616161; border-left: 3px solid #2CABBA;&quot;&gt;
+                              &lt;div class=&quot;col-xs-6&quot;&gt;
+            	                  &lt;p t-field=&quot;o.note&quot;/&gt;
+            		          &lt;p t-if=&quot;o.payment_term&quot;&gt;
+                		      &lt;strong&gt;Payment Term:&lt;/strong&gt;
+                		      &lt;span t-field=&quot;o.payment_term&quot;/&gt;
+            		          &lt;/p&gt;  
+                               &lt;/div&gt;
+                           &lt;/div&gt;
+                           &lt;br/&gt;&lt;br/&gt; 
+            		&lt;div class=&quot;oe_structure&quot;/&gt;
+        		&lt;/div&gt; 	
+    		</field>
+    		
+    		<!--FOOTER-->
+    		<field name="qweb_footer">
+    		    &lt;div class=&quot;footer&quot;&gt;
+        			&lt;div class=&quot;row text-center&quot; style=&quot;border-top: 1px solid  #CCCCCC; color: #616161;&quot;&gt;
+            			&lt;ul t-if=&quot;not company.custom_footer&quot; class=&quot;list-inline&quot;&gt;
+                			&lt;li t-if=&quot;company.phone&quot;&gt;Phone: &lt;span t-field=&quot;company.phone&quot;/&gt;&lt;/li&gt;
+
+                			&lt;li t-if=&quot;company.fax and company.phone&quot;&gt;&amp;amp;bull;&lt;/li&gt;
+                			&lt;li t-if=&quot;company.fax&quot;&gt;Fax: &lt;span t-field=&quot;company.fax&quot;/&gt;&lt;/li&gt;
+
+                			&lt;li t-if=&quot;company.email&quot;&gt;&amp;amp;bull;&lt;/li&gt;
+                			&lt;li t-if=&quot;company.email&quot;&gt;Email: &lt;span t-field=&quot;company.email&quot;/&gt;&lt;/li&gt;
+
+                			&lt;li t-if=&quot;company.website&quot;&gt;&amp;amp;bull;&lt;/li&gt;
+                			&lt;li t-if=&quot;company.website&quot;&gt;Website: &lt;span t-field=&quot;company.website&quot;/&gt;&lt;/li&gt;
+            			&lt;/ul&gt;
+
+            			&lt;t t-if=&quot;company.custom_footer&quot;&gt;
+                			&lt;span t-raw=&quot;company.rml_footer&quot;/&gt;
+            			&lt;/t&gt;
+
+            			&lt;ul class=&quot;list-inline&quot;&gt;
+                			&lt;li&gt;Page:&lt;/li&gt;
+                			&lt;li&gt;&lt;span class=&quot;page&quot;/&gt;&lt;/li&gt;
+                			&lt;li&gt;/&lt;/li&gt;
+                			&lt;li&gt;&lt;span class=&quot;topage&quot;/&gt;&lt;/li&gt;
+            			&lt;/ul&gt;
+        			&lt;/div&gt;
+    			&lt;/div&gt; 			   
+    		</field>
+    		
+    		<field name="image" type="base64" file="quotation_templates_nd/images/neodata_template_1.jpg"/>
+    		<field name="image_medium" type="base64" file="quotation_templates_nd/images/neodata_template_1.jpg"/>
+    		<!--<field name="selected">False</field>-->
+    	</record>
+	</data>
+</openerp>

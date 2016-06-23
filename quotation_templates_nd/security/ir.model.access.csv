@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_quotation_templates_nd,quotation.templates.nd all,quotation_templates_nd.model_quotation_templates_nd,base.group_sale_salesman,1,1,0,0
+access_ir_ui_view,ir.ui.view all,base.model_ir_ui_view,base.group_sale_salesman,1,1,0,0

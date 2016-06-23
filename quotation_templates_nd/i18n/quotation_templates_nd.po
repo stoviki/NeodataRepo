@@ -1,0 +1,323 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* quotation_templates_nd
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-20 10:22+0000\n"
+"PO-Revision-Date: 2016-06-20 10:22+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: quotation_templates_nd
+#: view:website:report.external_layout_footer
+msgid "&bull;"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: model:ir.actions.act_window,help:quotation_templates_nd.action_quotation_templates_create
+#: model:ir.actions.act_window,help:quotation_templates_nd.action_quotation_templates_select
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"            There aren't any quotation templates in the database.\n"
+"          </p>\n"
+"          <p>\n"
+"            The default quotation templates are not available. You can create new templates and then select one of them for your quotations. \n"
+"          </p>\n"
+"        "
+msgstr ""
+
+#. module: quotation_templates_nd
+#: help:product.category,category_description:0
+msgid "A precise description of the Category."
+msgstr ""
+
+#. module: quotation_templates_nd
+#: field:product.category,category_description:0
+msgid "Category Description"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: view:quotation.templates.nd:quotation_templates_nd.view_form_quotation_templates_nd
+msgid "Content"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: model:ir.actions.act_window,name:quotation_templates_nd.action_quotation_templates_create
+msgid "Create Template"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: field:quotation.templates.nd,create_uid:0
+msgid "Created by"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: field:quotation.templates.nd,create_date:0
+msgid "Created on"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "Date Ordered:"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: view:product.category:quotation_templates_nd.product_category_desc_form_view
+#: field:quotation.templates.nd,description:0
+#: view:website:sale.report_saleorder_document
+msgid "Description"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "Disc.(%)"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: view:website:report.external_layout_footer
+msgid "Email:"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: view:website:report.external_layout_footer
+msgid "Fax:"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: view:quotation.templates.nd:quotation_templates_nd.view_form_quotation_templates_nd
+msgid "Footer"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: view:quotation.templates.nd:quotation_templates_nd.view_form_quotation_templates_nd
+msgid "Header"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: field:quotation.templates.nd,id:0
+msgid "ID"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: field:product.category,image:0
+#: field:quotation.templates.nd,image:0
+msgid "Image"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "Invoice address:"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "Invoice and shipping address:"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: field:quotation.templates.nd,write_uid:0
+msgid "Last Updated by"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: field:quotation.templates.nd,write_date:0
+msgid "Last Updated on"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: field:product.category,image_medium:0
+#: field:quotation.templates.nd,image_medium:0
+msgid "Medium-sized image"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: help:product.category,image_medium:0
+msgid "Medium-sized image of the category. It is automatically resized as a 128x128px image, with aspect ratio preserved, only when the image exceeds one of those sizes. Use this field in form views or some kanban views."
+msgstr ""
+
+#. module: quotation_templates_nd
+#: help:quotation.templates.nd,image_medium:0
+msgid "Medium-sized image of the quotation template. It is automatically resized as a 128x128px image, with aspect ratio preserved, only when the image exceeds one of those sizes. Use this field in form views or some kanban views."
+msgstr ""
+
+#. module: quotation_templates_nd
+#: field:quotation.templates.nd,name:0
+msgid "Name"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "Order N°"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: view:website:report.external_layout_footer
+msgid "Page:"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "Payment Term:"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: view:website:report.external_layout_footer
+msgid "Phone:"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: view:quotation.templates.nd:quotation_templates_nd.view_kanban_quotation_templates_nd
+msgid "Preview"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "Price"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: model:ir.model,name:quotation_templates_nd.model_product_category
+msgid "Product Category"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "Quantity"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: view:quotation.templates.nd:quotation_templates_nd.view_image_form
+msgid "Quotation"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "Quotation Date:"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "Quotation N°"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: model:ir.ui.menu,name:quotation_templates_nd.menu_quotation_templates
+#: view:quotation.templates.nd:quotation_templates_nd.view_form_quotation_templates_nd
+#: view:quotation.templates.nd:quotation_templates_nd.view_kanban_quotation_templates_nd
+msgid "Quotation Templates"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: field:quotation.templates.nd,qweb_content:0
+msgid "Report Content"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: field:quotation.templates.nd,qweb_footer:0
+msgid "Report Footer"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: field:quotation.templates.nd,qweb_header:0
+msgid "Report Header"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "Salesperson:"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: view:quotation.templates.nd:quotation_templates_nd.view_search_quotation_templates_nd
+msgid "Search Quotation Templates"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: model:ir.actions.act_window,name:quotation_templates_nd.action_quotation_templates_select
+#: model:ir.ui.menu,name:quotation_templates_nd.menu_quotation_templates_select
+#: view:quotation.templates.nd:quotation_templates_nd.view_kanban_quotation_templates_nd
+msgid "Select Template"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: field:quotation.templates.nd,selected:0
+msgid "Selected"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "Shipping address :"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "Taxes"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: field:quotation.templates.nd,external_id:0
+msgid "Technical Name"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: code:addons/quotation_templates_nd/quotation_templates_nd.py:51
+#, python-format
+msgid "Template Preview"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: model:ir.ui.menu,name:quotation_templates_nd.menu_quotation_templates_create
+msgid "Templates"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: help:product.category,image:0
+msgid "This field holds the image used as image for the product category, limited to 1024x1024px."
+msgstr ""
+
+#. module: quotation_templates_nd
+#: help:quotation.templates.nd,image:0
+msgid "This field holds the image used as image for the quotation template, limited to 1024x1024px."
+msgstr ""
+
+#. module: quotation_templates_nd
+#: view:quotation.templates.nd:quotation_templates_nd.view_kanban_quotation_templates_nd
+msgid "This is the current template"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "Total"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "Total Without Taxes"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "Unit Price"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "VAT:"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: view:website:report.external_layout_footer
+msgid "Website:"
+msgstr ""
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "Your Reference:"
+msgstr ""
+

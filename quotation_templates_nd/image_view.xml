@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+	<data>
+		<record id="view_image_form" model="ir.ui.view">
+    		<field name="name">view.image.form</field>
+    		<field name="model">quotation.templates.nd</field>
+    		<field name="arch" type="xml">
+        		<form string="Quotation">
+        		    <div align="center"> 
+        		    	<field name="description" readonly="True"/>
+					</div>	 
+        			<div align="center">        				         		
+						<field name="image" widget="image" style="width: 595px; height: 842px; border: 1px solid #CCCCCC;"/>
+					</div>									
+        		</form>
+    		</field>
+		</record>		
+	</data>
+</openerp>

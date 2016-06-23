@@ -1,0 +1,329 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* quotation_templates_nd
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 8.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2016-06-20 10:21+0000\n"
+"PO-Revision-Date: 2016-06-20 10:21+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: quotation_templates_nd
+#: view:website:report.external_layout_footer
+msgid "&bull;"
+msgstr "&bull;"
+
+#. module: quotation_templates_nd
+#: model:ir.actions.act_window,help:quotation_templates_nd.action_quotation_templates_create
+#: model:ir.actions.act_window,help:quotation_templates_nd.action_quotation_templates_select
+msgid "<p class=\"oe_view_nocontent_create\">\n"
+"            There aren't any quotation templates in the database.\n"
+"          </p>\n"
+"          <p>\n"
+"            The default quotation templates are not available. You can create new templates and then select one of them for your quotations. \n"
+"          </p>\n"
+"        "
+msgstr "<p class=\"oe_view_nocontent_create\">\n"
+"            Не постојат урнеци во оваа база.\n"
+"          </p>\n"
+"          <p>\n"
+"            Основните урнеци не се достапни. Може да креирате нов урнек, па потоа да го изберете. \n"
+"          </p>\n"
+"        "
+
+#. module: quotation_templates_nd
+#: help:product.category,category_description:0
+msgid "A precise description of the Category."
+msgstr "Детален опис на категоријата."
+
+#. module: quotation_templates_nd
+#: field:product.category,category_description:0
+msgid "Category Description"
+msgstr "Опис на категорија"
+
+#. module: quotation_templates_nd
+#: view:quotation.templates.nd:quotation_templates_nd.view_form_quotation_templates_nd
+msgid "Content"
+msgstr "Содржина"
+
+#. module: quotation_templates_nd
+#: model:ir.actions.act_window,name:quotation_templates_nd.action_quotation_templates_create
+msgid "Create Template"
+msgstr "Креирај урнек"
+
+#. module: quotation_templates_nd
+#: field:quotation.templates.nd,create_uid:0
+msgid "Created by"
+msgstr "Креирано од"
+
+#. module: quotation_templates_nd
+#: field:quotation.templates.nd,create_date:0
+msgid "Created on"
+msgstr "Креирано на"
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "Date Ordered:"
+msgstr "Датум на нарачка:"
+
+#. module: quotation_templates_nd
+#: view:product.category:quotation_templates_nd.product_category_desc_form_view
+#: field:quotation.templates.nd,description:0
+#: view:website:sale.report_saleorder_document
+msgid "Description"
+msgstr "Опис"
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "Disc.(%)"
+msgstr "Попуст(%)"
+
+#. module: quotation_templates_nd
+#: view:website:report.external_layout_footer
+msgid "Email:"
+msgstr "Е-маил:"
+
+#. module: quotation_templates_nd
+#: view:website:report.external_layout_footer
+msgid "Fax:"
+msgstr "Fax:"
+
+#. module: quotation_templates_nd
+#: view:quotation.templates.nd:quotation_templates_nd.view_form_quotation_templates_nd
+msgid "Footer"
+msgstr "Footer"
+
+#. module: quotation_templates_nd
+#: view:quotation.templates.nd:quotation_templates_nd.view_form_quotation_templates_nd
+msgid "Header"
+msgstr "Header"
+
+#. module: quotation_templates_nd
+#: field:quotation.templates.nd,id:0
+msgid "ID"
+msgstr "ID"
+
+#. module: quotation_templates_nd
+#: field:product.category,image:0
+#: field:quotation.templates.nd,image:0
+msgid "Image"
+msgstr "Image"
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "Invoice address:"
+msgstr "Адреса на фактура:"
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "Invoice and shipping address:"
+msgstr "Адреса на фактура и испорака:"
+
+#. module: quotation_templates_nd
+#: field:quotation.templates.nd,write_uid:0
+msgid "Last Updated by"
+msgstr "Последно ажурирано од"
+
+#. module: quotation_templates_nd
+#: field:quotation.templates.nd,write_date:0
+msgid "Last Updated on"
+msgstr "Последно ажурирано на"
+
+#. module: quotation_templates_nd
+#: field:product.category,image_medium:0
+#: field:quotation.templates.nd,image_medium:0
+msgid "Medium-sized image"
+msgstr "Слика со средна големина"
+
+#. module: quotation_templates_nd
+#: help:product.category,image_medium:0
+msgid "Medium-sized image of the category. It is automatically resized as a 128x128px image, with aspect ratio preserved, only when the image exceeds one of those sizes. Use this field in form views or some kanban views."
+msgstr "Слика од категоријата со средна големина. Големината автоматски се поставува на 128x128px, со соодветен размер, само кога сликата ќе ги надмине овие димензии. Користете го ова поле во форми или канбан погледи."
+
+#. module: quotation_templates_nd
+#: help:quotation.templates.nd,image_medium:0
+msgid "Medium-sized image of the quotation template. It is automatically resized as a 128x128px image, with aspect ratio preserved, only when the image exceeds one of those sizes. Use this field in form views or some kanban views."
+msgstr "Слика од категоријата со средна големина. Големината автоматски се поставува на 128x128px, со соодветен размер, само кога сликата ќе ги надмине овие димензии. Користете го ова поле во форми или канбан погледи."
+
+#. module: quotation_templates_nd
+#: field:quotation.templates.nd,name:0
+msgid "Name"
+msgstr "Име"
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "Order N°"
+msgstr "Нарачка N°"
+
+#. module: quotation_templates_nd
+#: view:website:report.external_layout_footer
+msgid "Page:"
+msgstr "Страна:"
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "Payment Term:"
+msgstr "Време за плаќање:"
+
+#. module: quotation_templates_nd
+#: view:website:report.external_layout_footer
+msgid "Phone:"
+msgstr "Телефон:"
+
+#. module: quotation_templates_nd
+#: view:quotation.templates.nd:quotation_templates_nd.view_kanban_quotation_templates_nd
+msgid "Preview"
+msgstr "Преглед"
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "Price"
+msgstr "Цена"
+
+#. module: quotation_templates_nd
+#: model:ir.model,name:quotation_templates_nd.model_product_category
+msgid "Product Category"
+msgstr "Категорија на производ"
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "Quantity"
+msgstr "Количина"
+
+#. module: quotation_templates_nd
+#: view:quotation.templates.nd:quotation_templates_nd.view_image_form
+msgid "Quotation"
+msgstr "Понуда"
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "Quotation Date:"
+msgstr "Датум на понуда:"
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "Quotation N°"
+msgstr "Понуда бр."
+
+#. module: quotation_templates_nd
+#: model:ir.ui.menu,name:quotation_templates_nd.menu_quotation_templates
+#: view:quotation.templates.nd:quotation_templates_nd.view_form_quotation_templates_nd
+#: view:quotation.templates.nd:quotation_templates_nd.view_kanban_quotation_templates_nd
+msgid "Quotation Templates"
+msgstr "Урнеци за понуди"
+
+#. module: quotation_templates_nd
+#: field:quotation.templates.nd,qweb_content:0
+msgid "Report Content"
+msgstr "Содржина на извештај"
+
+#. module: quotation_templates_nd
+#: field:quotation.templates.nd,qweb_footer:0
+msgid "Report Footer"
+msgstr "Фуснота на извештај"
+
+#. module: quotation_templates_nd
+#: field:quotation.templates.nd,qweb_header:0
+msgid "Report Header"
+msgstr "Заглавие на извештај"
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "Salesperson:"
+msgstr "Продавач:"
+
+#. module: quotation_templates_nd
+#: view:quotation.templates.nd:quotation_templates_nd.view_search_quotation_templates_nd
+msgid "Search Quotation Templates"
+msgstr "Барај урнек"
+
+#. module: quotation_templates_nd
+#: model:ir.actions.act_window,name:quotation_templates_nd.action_quotation_templates_select
+#: model:ir.ui.menu,name:quotation_templates_nd.menu_quotation_templates_select
+#: view:quotation.templates.nd:quotation_templates_nd.view_kanban_quotation_templates_nd
+msgid "Select Template"
+msgstr "Избери урнек"
+
+#. module: quotation_templates_nd
+#: field:quotation.templates.nd,selected:0
+msgid "Selected"
+msgstr "Избран"
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "Shipping address :"
+msgstr "Shipping address :"
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "Taxes"
+msgstr "Даноци"
+
+#. module: quotation_templates_nd
+#: field:quotation.templates.nd,external_id:0
+msgid "Technical Name"
+msgstr "Техничко име"
+
+#. module: quotation_templates_nd
+#: code:addons/quotation_templates_nd/quotation_templates_nd.py:51
+#, python-format
+msgid "Template Preview"
+msgstr "Преглед на урнек"
+
+#. module: quotation_templates_nd
+#: model:ir.ui.menu,name:quotation_templates_nd.menu_quotation_templates_create
+msgid "Templates"
+msgstr "Урнеци"
+
+#. module: quotation_templates_nd
+#: help:product.category,image:0
+msgid "This field holds the image used as image for the product category, limited to 1024x1024px."
+msgstr "Во ова поле се чува сликата на категоријата на продукти, со максимална големина 1024x1024px."
+
+#. module: quotation_templates_nd
+#: help:quotation.templates.nd,image:0
+msgid "This field holds the image used as image for the quotation template, limited to 1024x1024px."
+msgstr "Во ова поле се чува сликата на урнекот, со максимална големина 1024x1024px."
+
+#. module: quotation_templates_nd
+#: view:quotation.templates.nd:quotation_templates_nd.view_kanban_quotation_templates_nd
+msgid "This is the current template"
+msgstr "Ова е тековниот урнек"
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "Total"
+msgstr "Вкупно"
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "Total Without Taxes"
+msgstr "Даночна основица"
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "Unit Price"
+msgstr "Единечна цена"
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "VAT:"
+msgstr "ДДВ:"
+
+#. module: quotation_templates_nd
+#: view:website:report.external_layout_footer
+msgid "Website:"
+msgstr "Веб страна:"
+
+#. module: quotation_templates_nd
+#: view:website:sale.report_saleorder_document
+msgid "Your Reference:"
+msgstr "Ваша референца:"
+
